@@ -30,7 +30,7 @@ Task Vault is a React application for managing your daily tasks, with a clean us
 1. Clone the repository
 
    ```sh
-   git clone https://github.com/yourusername/task-vault.git
+   git clone https://github.com/malintha-induwara/task-vault.git
    cd task-vault
    ```
 
