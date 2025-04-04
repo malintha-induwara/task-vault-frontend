@@ -103,7 +103,7 @@ export const resetPassword = createAsyncThunk(
 
 export const logout = createAsyncThunk(
   'auth/logout',
-  async (_, { rejectWithValue }) => {
+  async () => {
     try {
       await axios.post(`${API_URL}/auth/logout`);
       localStorage.removeItem('accessToken');

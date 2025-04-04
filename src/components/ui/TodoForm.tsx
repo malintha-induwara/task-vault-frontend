@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createTodo } from "../../store/slices/todoSlice";
 import { clearError } from "../../store/slices/authSlice";
 import { AppDispatch, RootState } from "../../store";
-import { Calendar, Loader2, Plus } from "lucide-react";
+import { Calendar,Plus } from "lucide-react";
 
 const TodoForm = () => {
   const dispatch = useDispatch<AppDispatch>();
