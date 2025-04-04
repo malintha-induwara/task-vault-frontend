@@ -151,7 +151,6 @@ const ChangePasswordForm = () => {
         className="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         disabled={isLoading}
       >
-        {isLoading ? <span className="inline-block h-4 w-4 border-2 border-t-transparent border-white rounded-full animate-spin mr-2"></span> : null}
         Change Password
         <ArrowRight size={18} className="ml-2" />
       </button>
