@@ -22,19 +22,18 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor to handle token refresh
+// handle token refresh
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
     const originalRequest = error.config;
 
-    // Check specifically for 401 Unauthorized or it's not a retry already
+    // Check specifically for 401 Unauthorized or weather its not a retry 
     if (error.response?.status === 401 && !originalRequest._retry) {
-      originalRequest._retry = true; // Mark as retried
+      originalRequest._retry = true; 
 
       try {
         console.log('Access token expired. Attempting refresh...');
-        // Attempt to refresh the token
         const response = await axios.post(`${API_URL}/auth/refresh`, {}, { withCredentials: true });
         const newToken = response.data.accessToken;
         console.log('Token refreshed successfully.');
